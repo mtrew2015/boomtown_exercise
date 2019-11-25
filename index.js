@@ -36,10 +36,10 @@ axios
 			axios
 				.get(link)
 				.then((res) => {
-					if (res.status === 200) {
+					if (res.statusCode == 200) {
 						console.log('good response');
 					} else {
-						`The link ${link} returned a status for of ${res.status}`;
+						`The link ${link} returned a status for of ${res.statusCode}`;
 					}
 				})
 				.catch((err) => console.log(err));
