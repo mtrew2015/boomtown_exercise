@@ -15,7 +15,6 @@ axios
 			console.log(`There is a error with the created at and updated at dates`);
 		}
 		repoCount = res.data.public_repos;
-		const values = Object.values(res.data);
 		const keys = Object.values(res.data);
 		for (let i = 0; i < keys.length; i++) {
 			current = keys[i];
@@ -38,7 +37,7 @@ axios
 				.get(link)
 				.then((res) => {
 					if (res.status === 200) {
-						console.log(res.data);
+						console.log('good response');
 					} else {
 						`The link ${link} returned a status for of ${res.status}`;
 					}
